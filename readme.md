@@ -1,24 +1,77 @@
 <div align="center">
-<h1>Javascript Advanced September 2021</h1>
+<h1 style="color:white">Javascript Advanced September 2021</h1>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_Software_University_%28SoftUni%29_-_blue.png" alt="softuni logo" width="150"/><br/>
+<div style="display:flex; width:100%; max-width:1000px; flex-direction:row; background-color:#fff; color:#000">
+  <div style="position:relative; width:35%; margin:0 auto;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_Software_University_%28SoftUni%29_-_blue.png" 
+    alt="softuni logo"
+    style="position:relative; width:150px; padding:10px; margin: 0 auto;"
+    />
+  </div>
+  <div style="position:relative; width:65%; margin:0 auto;">
+    <h2 style="position:relative; padding:10px 0; font-size:1.1em; color:#1d2029">
+      13 September ― 23 October 2021
+    </h2>
+  </div>
+</div>
 
-<h2>COURSE CURRICULUM:</h2>
+<table style="width:100%; max-width:1000px; background-color:#1d2029; color:#e4e4e4">
+<tr>
+  <th width="35%" style="text-align:center; vertical-align: middle;">COURSE  CURRICULUM</th>
+  <th style="text-align:center; vertical-align: middle;">EXERCISES</th>
+</tr>
+<tr>
+  <td style="text-align:center; vertical-align: middle;">Syntax, Functions and Statements</td>
+  <td style="text-align:center; vertical-align: middle;">
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/01.%20Syntax%2C%20Functions%20and%20Statements%20-%20Lab">Syntax, Functions and Statements - Lab</a><br/>
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/02.%20Syntax%2C%20Functions%20and%20Statements%20%20-%20Exercise">Syntax, Functions and Statements - Exercise</a>
+  </td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Arrays and Nested Arrays</td>
+  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Objects and Composition</td>
+  <td style="text-align: center; vertical-align: middle;">
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/05.%20Objects%20and%20Composition">Objects and Composition - Lab</a><br/>
+    <a href="#">Objects and Composition - Exercise (not available yet)</a>
+  </td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">DOM Introduction</td>
+  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">DOM Manipulations and Events</td>
+  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Advanced Functions</td>
+  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Unit Testing and Error Handling</td>
+  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Classes</td>
+  <td style="text-align: center; vertical-align: middle;">
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/15.%20Classes">Classes - Lab</a><br/>
+    <a href="#">Classes - Exercise (not available yet)</a>
+  </td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Prototypes and Inheritance</td>
+  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+</tr>
+</table>
 
-### Syntax, Functions and Statements
-### Arrays and Nested Arrays
-### Objects and Composition
-### DOM Introduction
-### DOM Manipulations and Events
-### Advanced Functions
-### Unit Testing and Error Handling
-### Classes
-### Prototypes and Inheritance
 </div>
 <br/>
 
 #
-<h2 align="center">Course Notes</h2>
+<h2 style="color:white" align="center">Course Notes</h2>
 
 <p align="center">Notes I took to help me during the course.<br/></p>
 <br/>
