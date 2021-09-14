@@ -1,23 +1,11 @@
-function aggregateElements(...els) {
-    const operations = {
-      sum: (els) => {
-        const total = els.reduce((a, b) => Number(a) + Number(b));
-        console.log(total)
-      },
-      sumInverseValues: (els) => {
-        let total = 0;
-        for (let i = 0; i < els.length; i++) {
-          total += 1 / els[i];
-        }
-        console.log(total)
-      },
-      concat: (els) => {
-        const joined = els.reduce((a, b) => (a + '') + (b + ''));
-        console.log(joined)
-      }
-    }
-  
-    for (let fn in operations) {
-      operations[fn](...els)
-    }
+function aggregateElements(els) {
+
+  const sum = els.reduce((a, b) => Number(a) + Number(b));
+  const sumInverseValues = els.reduce((a, b) => Number(a) + 1 / Number(b), 0);
+  const concat = els.join('');
+
+  console.log(sum)
+  console.log(sumInverseValues)
+  console.log(concat)
+
 }
