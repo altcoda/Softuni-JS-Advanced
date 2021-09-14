@@ -1,11 +1,12 @@
 function sumOfNumbers(n, m) {
-    let sum = 0;
-    let startNum = Number(n);
-    let endNum = Number(m);
+
+  let startNum = Number(n);
+  let endNum = Number(m);
+  let sum = 0;
   
-    for (let i = startNum; i <= endNum; i++) {
-      sum += i;
-    }
-    
-    console.log(sum)
+  for (let i = startNum; i <= endNum; i++) {
+    sum += i;
+  }
+
+  return sum;
 }
