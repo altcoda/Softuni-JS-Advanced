@@ -29,7 +29,10 @@
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Arrays and Nested Arrays</td>
-  <td style="text-align: center; vertical-align: middle;">Not available yet</td>
+  <td style="text-align: center; vertical-align: middle;">
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/03.%20%20Arrays%20and%20Nested%20Arrays">Arrays and Nested Arrays - Lab</a><br/>
+    <a href="#">Arrays and Nested Arrays - Exercise (not available yet)</a>
+  </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Objects and Composition</td>
@@ -58,7 +61,7 @@
   <td style="text-align: center; vertical-align: middle;">Classes</td>
   <td style="text-align: center; vertical-align: middle;">
     <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/15.%20Classes">Classes - Lab</a><br/>
-    <a href="#">Classes - Exercise (not available yet)</a>
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/16.%20Classes%20-%20Exercise">Classes - Exercise</a>
   </td>
 </tr>
 <tr>
