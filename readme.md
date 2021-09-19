@@ -8,8 +8,8 @@
 
 <table style="width:100%; max-width:1000px; background-color:#1d2029; color:#e4e4e4">
 <tr>
-  <th width="40%" style="text-align:center; vertical-align: middle;">COURSE  CURRICULUM</th>
-  <th width="60%" style="text-align:center; vertical-align: middle;">SOLUTIONS</th>
+  <th style="text-align:center; vertical-align: middle;">COURSE  CURRICULUM</th>
+  <th style="text-align:center; vertical-align: middle;">SOLUTIONS</th>
 </tr>
 <tr>
   <td style="text-align:center; vertical-align: middle;">Syntax, Functions and Statements</td>
