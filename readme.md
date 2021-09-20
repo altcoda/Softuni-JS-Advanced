@@ -270,7 +270,6 @@ class Point {
     const yDiff = pointA.y - pointB.y;
     return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
   }
-
 }
 
 ```
