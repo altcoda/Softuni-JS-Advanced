@@ -1,4 +1,4 @@
-function assemblyLine(width, height, color) {
+function assemblyLine() {
 
     return {
       hasClima: (object) => {
