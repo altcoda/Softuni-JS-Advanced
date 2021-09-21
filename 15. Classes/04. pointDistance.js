@@ -4,8 +4,8 @@ class Point {
       this.y = y;
     }
     static distance(pointA, pointB) {
-      var xDiff = pointA.x - pointB.x;
-      var yDiff = pointA.y - pointB.y;
+      let xDiff = pointA.x - pointB.x;
+      let yDiff = pointA.y - pointB.y;
   
       return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
