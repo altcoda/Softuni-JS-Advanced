@@ -21,8 +21,10 @@ function carFactory(car) { // params give client requirements for a car
     ]
   
     // Sorted in case you wanted to add more engine options
-    const sortedByPowerAsc = engines.sort((a, b) => Object.values(a)[0].power - Object.values(b)[0].power);
-    const chosenEngine = sortedByPowerAsc.find(engine => Object.values(engine)[0].power >= car.power);
+    const sortedByPowerAsc = engines
+      .sort((a, b) => Object.values(a)[0].power - Object.values(b)[0].power);
+    const chosenEngine = sortedByPowerAsc
+      .find(engine => Object.values(engine)[0].power >= car.power);
   
     // The size can only be an odd number
     const wheelsDiameter = car.wheelsize % 2 === 0 ? Number(car.wheelsize) - 1 : Number(car.wheelsize);
