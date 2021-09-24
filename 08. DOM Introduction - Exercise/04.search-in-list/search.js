@@ -5,14 +5,15 @@ function search() {
 
    let matches = 0;
    for(let i = 0; i < listItems.length; i++) {
-      let text = listItems[i].textContent;
-      listItems[i].outerHTML = `<li>${text}</li>`;
-      if(text.includes(inputValue)) { 
-         matches++; 
-         listItems[i].outerHTML = `<li><u><bold>${text}</bold></u></li>`;
+      const li = listItems[i];
+      li.style.fontWeight = '';
+      li.style.textDecoration = '';
+
+      if(li.textContent.includes(inputValue)) { 
+         matches++;
+         li.style.fontWeight = 'bold';
+         li.style.textDecoration = 'underline';
       }
-      console.log(listItems[i].outerHTML)
    }
-   
    document.getElementById('result').textContent = `${matches} matches found`;
 }
