@@ -51,13 +51,10 @@ function ticTacToe(moves) {
           secondDiagonalPos--;
         }
         
-        // If all cells are the same and not false current player wins
-        if (firstDiagonalTurns.size === 1 && firstDiagonalTurns.has(turn)) {
-            winner = turn;
-        }
-        if(secondDiagonalTurns.size === 1 && secondDiagonalTurns.has(turn)){
-            winner = turn;
-        }
+        // If all cells of any diagonal are the same and not false current player wins
+        const firstDiagonalWin = firstDiagonalTurns.size === 1 && firstDiagonalTurns.has(turn);
+        const secondDiagonalWin = secondDiagonalTurns.size === 1 && secondDiagonalTurns.has(turn);
+        if (firstDiagonalWin || secondDiagonalWin){ winner = turn; }
       }
     }
     
