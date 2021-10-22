@@ -9,13 +9,13 @@ function addItem() {
     const newItem = document.createElement('li');
     newItem.textContent = document.getElementById('newItemText').value;
 
-    const deleteButton = document.createElement('a');
-    deleteButton.textContent = '[Delete]';
-    deleteButton.setAttribute('href', '#');
-    deleteButton.addEventListener('click', (e) => {
+    const deleteBtn = document.createElement('a');
+    deleteBtn.textContent = '[Delete]';
+    deleteBtn.href = '#';
+    deleteBtn.addEventListener('click', (e) => {
         e.target.parentElement.remove()
     })
-    newItem.appendChild(deleteButton)
+    newItem.appendChild(deleteBtn)
 
     items.appendChild(newItem)
 }
