@@ -1,7 +1,5 @@
 function solve() {
 
-  document.querySelector('#btnSend').addEventListener('click', onClick);
-
   class Restaurant {
     constructor(name, employees) {
       Object.assign(this, {
@@ -18,7 +16,7 @@ function solve() {
     }
   }
 
-  function onClick() {
+  document.getElementById('btnSend').addEventListener('click', (e) => {
     let restaurants = [];
     const data = Array.from(JSON.parse(document.querySelector('#inputs textarea').value));
 
@@ -27,7 +25,7 @@ function solve() {
 
       let employees = [];
 
-      // map through employee data and push into an array
+      // Map through employee data and push into an array
       employeesData.split(', ').map(employee => {
         const [first_name, salary] = employee.split(' ');
         
@@ -37,6 +35,7 @@ function solve() {
         })
       })
 
+      // Check if restaurant repeats
       const repeatedIndex = restaurants.findIndex(r => r.name === restaurantName);
       if(repeatedIndex != -1) {
          const previousEmployees = restaurants[repeatedIndex].employees;
@@ -65,13 +64,12 @@ function solve() {
       return bestRestaurant
     }
 
-    let bestRestaurant = getBestRestaurant();
-    let bestEmployees = bestRestaurant.employees;
-    let bestEmployeesText = bestEmployees.reduce((acc, employee) => (acc += `Name: ${employee.name} With Salary: ${employee.salary} `), '').trim();
+    const bestRestaurant = getBestRestaurant();
+    const bestSalary = bestRestaurant.employees[0].salary;
+    const bestEmployeesList = bestRestaurant.employees.reduce((acc, employee) => (acc += `Name: ${employee.name} With Salary: ${employee.salary} `), '').trim();
 
-    let bestRestaurantField = document.querySelector('#bestRestaurant p');
-    let bestEmployeesField = document.querySelector('#workers p');
-    bestRestaurantField.textContent = `Name: ${bestRestaurant.name} Average Salary: ${bestRestaurant.median.toFixed(2)} Best Salary: ${bestEmployees[0].salary.toFixed(2)}`;
-    bestEmployeesField.textContent = bestEmployeesText;
-  }
+    document.querySelector('#bestRestaurant p').textContent = `Name: ${bestRestaurant.name} Average Salary: ${bestRestaurant.median.toFixed(2)} Best Salary: ${bestSalary.toFixed(2)}`;
+    document.querySelector('#workers p').textContent = bestEmployeesList;
+  
+  })
 }
