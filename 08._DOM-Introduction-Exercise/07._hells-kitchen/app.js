@@ -23,17 +23,15 @@ function solve() {
     data.forEach(restaurant => {
       let [restaurantName, employeesData] = restaurant.split(' - ');
 
-      let employees = [];
-
       // Map through employee data and push into an array
-      employeesData.split(', ').map(employee => {
+      let employees = employeesData.split(', ').reduce((acc, employee) => {
         const [first_name, salary] = employee.split(' ');
         
-        employees.push({
+        return acc.concat({
          name: first_name,
          salary: Number(salary)
         })
-      })
+      }, [])
 
       // Check if restaurant repeats
       const repeatedIndex = restaurants.findIndex(r => r.name === restaurantName);
@@ -44,8 +42,6 @@ function solve() {
         restaurants.push(new Restaurant(restaurantName, employees))
       }
     })
-
-    console.log(restaurants)
 
     const getBestRestaurant = () => {
       const { index } = restaurants.reduce((best, restaurant, index) =>
