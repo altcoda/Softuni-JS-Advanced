@@ -14,58 +14,58 @@
 <tr>
   <td style="text-align:center; vertical-align: middle;">Syntax, Functions and Statements</td>
   <td style="text-align:center; vertical-align: middle;">
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/01.%20Syntax%2C%20Functions%20and%20Statements%20-%20Lab">Lab</a> |
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/02.%20Syntax%2C%20Functions%20and%20Statements%20%20-%20Exercise">Exercise</a>
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/01._Syntax-Functions-and-Statements-Lab">Lab</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/03._Arrays-and-Nested-Arrays">Exercise</a>
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Arrays and Nested Arrays</td>
   <td style="text-align: center; vertical-align: middle;">
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/03.%20%20Arrays%20and%20Nested%20Arrays">Lab</a> |
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/04.%20Arrays%20and%20Nested%20Arrays%20-%20Exercise">Exercise</a>
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/03._Arrays-and-Nested-Arrays">Lab</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/04._Arrays-and-Nested-Arrays-Exercise">Exercise</a>
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Objects and Composition</td>
   <td style="text-align: center; vertical-align: middle;">
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/05.%20Objects%20and%20Composition">Lab</a> |
-    Exercise
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/05._Objects-and-Composition">Lab</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/06._Objects-and-Composition-Exercise">Exercise</a>
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">DOM Introduction</td>
   <td style="text-align: center; vertical-align: middle;">
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/07.%20DOM%20Introduction">
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/07._DOM-Introduction">
     Lab</a> |
-    Exercise
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/08._DOM-Introduction-Exercise">Exercise</a>
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">DOM Manipulations and Events</td>
   <td style="text-align: center; vertical-align: middle;">
-    Lab |
-    Exercise
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/09._DOM-Manipulations-and-Events">Lab</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/10._DOM-Manipulations-and-Events-Exercise">Exercise</a>
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Advanced Functions</td>
   <td style="text-align: center; vertical-align: middle;">
-    Lab |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/11._Advanced-Functions">Lab</a> |
     Exercise
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Unit Testing and Error Handling</td>
   <td style="text-align: center; vertical-align: middle;">
-    Lab |
-    Exercise
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/13._Unit-Testing-and-Error-Handling">Lab</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/14._Unit-Testing-and-Error-Handling-Exercise">Exercise</a>
   </td>
 </tr>
 <tr>
   <td style="text-align: center; vertical-align: middle;">Classes</td>
   <td style="text-align: center; vertical-align: middle;">
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/15.%20Classes">Lab</a> |
-    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/16.%20Classes%20-%20Exercise">Exercise</a>
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/15._Classes">Lab</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/16._Classes-Exercise">Exercise</a>
   </td>
 </tr>
 <tr>
@@ -73,6 +73,13 @@
   <td style="text-align: center; vertical-align: middle;">
     Lab |
     Exercise
+  </td>
+</tr>
+<tr>
+  <td style="text-align: center; vertical-align: middle;">Exam Preparation</td>
+  <td style="text-align: center; vertical-align: middle;">
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/19._Exam-Preparation-1">Part 1</a> |
+    <a href="https://github.com/altcoda/Softuni-JS-Advanced/tree/main/20._Exam-Preparation-2">Part 2 & More</a>
   </td>
 </tr>
 </table>
@@ -354,7 +361,7 @@ expect(() => fn(param)).to.throw('Wrong input!');
 
 expect(fn(param)).to.be.true
 expect(fn(param)).to.be.undefined
-To check if an array is the same:
+// To check if an array is the same:
 expect(fn(param)).to.deep.equal(['pineapple', 'pizza'])
 
 ```
