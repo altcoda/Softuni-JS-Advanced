@@ -88,7 +88,9 @@
 
 * [Objects & Composition](#objects)<br/>
 * [DOM Manipulation](#dom)<br/>
+* ["this"](#this)<br/>
 * [Classes](#classes)<br/>
+* [Unit Testing](#unit-testing)<br/>
 <br/>
 
 #
@@ -147,8 +149,8 @@ const { employees: [employeeName] } = company; // John
 ```javascript
 // Function Library (This technique is often used to expose public API in a module)
 const compareNumbers = {
-  ascending: (a, b) => a - b;
-  descending: (a, b) => b - a;
+  ascending: (a, b) => a - b,
+  descending: (a, b) => b - a
 };
 
 ```
@@ -184,7 +186,7 @@ for (const key in obj) {
 
 <h2 align="center"><a name="dom">DOM Manipulation</a></h2>
 
-<p>The <b>Document Object Model</b> (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.<br/>
+The <b>Document Object Model</b> (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.<br/>
 
 Find element:<br/>
 
@@ -203,6 +205,7 @@ prepend()  // add a child element as first
 cloneNode() // clone
 remove() // remove
 removeChild() // remove child element from parent
+replaceChild(newChild, oldChild) // replace child element
 getAttribute() // returns value of attributes of specified HTML element
 setAttribute() // sets value of an attribute on the specified HTML element
 removeAttribute() // remove the attribute with the specified name from an HTML element
@@ -212,7 +215,7 @@ hasAttribute() // returns true if the specified attribute exists, otherwise it r
 <h3 align="center"><b>Properties</b></h3>
 
 ```javascript
-innerHTML // returns and writes the HTML of a given element
+innerHTML // returns and writes the HTML of a given element, careful with this
 textContent // reads and writes text
 value // gets and sets value
 classList // a read-only property that returns a collection of the class attributes of specified element
@@ -221,16 +224,44 @@ classList // a read-only property that returns a collection of the class attribu
 ```javascript
 parent
 parentNode
+parentElement
 children
-firstElementChild // returns the first child node of an element
-lastElementChild // returns the last child node of an element
+firstElementChild // returns the first child node
+lastElementChild // returns the last child node
 nextElementSibling // returns the next node at the same node tree level
 previousElementSibling // returns the previous node at the same node tree level
 ```
 
+<h3 align="center"><b>Events</b></h3>
+
+- Event object contains properties that describe the event
+- Event types - mouse, touch, keyboard, DOM/UI, focus, form
+- Event registration is done by providing a callback
+function
+
+Three ways to register an event:
+- With HTML Attributes
+- Using DOM element properties
+- Using DOM event handler – preferred method
+
 <h3 align="center"><b>BOM</b></h3>
 
-<p>The BOM <b>(Browser Object Model)</b> consists of the objects <b>navigator, history, screen, location and document</b> which are children of window. In the document node is the DOM (Document Object Model), the document object model, which represents the contents of the page.</p>
+The BOM <b>(Browser Object Model)</b> consists of the objects <b>navigator, history, screen, location and document</b> which are children of window. In the document node is the DOM (Document Object Model), the document object model, which represents the contents of the page.
+
+#
+
+<h2 align="center"><a name="this">"this"</a></h2>
+<br/>
+
+When calling an event listener "this" points to the event target.
+
+These methods attach "this" to a function/object. <b>You can't use them with arrow functions!</b>
+
+```javascript
+bind() // creates a copy of the function, can be used to bind params
+call() // invokes the function and allows passing args one by one
+apply() // invokes the function and allows you to pass args as array
+```
 
 #
 
@@ -286,5 +317,61 @@ class Example {
 const instance = new Example()
 
 console.log(instance.private); //42
+
+```
+
+```javascript
+class Employee {
+    constructor(firstName, lastName, jobTitle) {
+      Object.assign(this, {
+        firstName,
+        lastName,
+        jobTitle
+      })
+    }
+}
+
+```
+
+#
+
+<h2 align="center"><a name="unit-testing">Unit Testing</a></h2>
+<br/>
+
+- Group tests into nested describe
+- Check if params are empty
+- Test reverse cases. ex: (0,'1') && ('1', 0)
+- Make tests with floats if neccessary
+- Check if it's returning or throwing an error
+- Keep in mind that NaN is of type number...
+
+<br/>
+
+```javascript
+// Some useful test examples
+
+expect(() => fn(param)).to.throw('Wrong input!');
+
+expect(fn(param)).to.be.true
+expect(fn(param)).to.be.undefined
+To check if an array is the same:
+expect(fn(param)).to.deep.equal(['pineapple', 'pizza'])
+
+```
+
+```javascript
+before() // is run once before all the tests in a describe
+after() //  is run once after all the tests in a describe
+beforeEach() //  is run before each test in a describe
+afterEach() //  is run after each test in a describe
+
+/*
+  example:
+  you can define this in the start to create a new instance before each test block
+*/
+
+beforeEach(() => {
+  instance = createCalculator();
+})
 
 ```
